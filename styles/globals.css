@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  min-height: 100%;
+}
+
+#__next {
+  height: 100%;
+}
+
+code {
+  font-family: 'Inter', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+  padding: 0.1rem 0.4rem;
+  font-size: 90%;
+  color: #d400ff;
+  border-radius: 0.1335rem;
+}
+code:not([class*='language-']):before,
+code:not([class*='language-']):after {
+  content: '`';
+}
+code[class*='language-'] {
+  padding: 0;
+}
+
+.ProseMirror-focused {
+  outline: 0px;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: #adb5bd;
+  pointer-events: none;
+  height: 0;
+}
+
+.ProseMirror p {
+  @apply pt-1 pb-1;
+}
+
+.ProseMirror a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.ProseMirror h1 {
+  font-weight: 400;
+  line-height: 1.4;
+  @apply text-2xl;
+}
+
+.ProseMirror h2 {
+  font-weight: 400;
+  line-height: 1.2;
+  @apply text-xl;
+}
+
+.ProseMirror mark {
+  @apply bg-yellow-100;
+}
+
+.ProseMirror code {
+  @apply bg-gray-100 p-1 border-spacing-1 rounded;
+}
+
+.ProseMirror hr {
+  width: 3rem;
+  border-bottom: 4px dotted;
+  @apply border-gray-500;
+}
+
+.ProseMirror ul {
+  padding-left: 1.4rem;
+}
+
+.ProseMirror ol {
+  padding-left: 1.5rem;
+}
+
+.ProseMirror li {
+  padding-left: 0.5rem;
+}
+
+.ProseMirror img {
+  max-width: 100%;
+}
+
+blockquote {
+  @apply border-l-2 border-gray-800 pl-3 m-0;
+}
+
+.paginator-button {
+  @apply cursor-pointer pt-4 pl-4 text-sm text-green-300 font-bold hover:text-lime-600;
+}
+
+.bubble-menu-button-inactive {
+  @apply flex m-1 pt-2 pb-2 w-10 justify-center bg-white text-gray-800 rounded-lg hover:bg-gray-200;
+}
+
+.bubble-menu-button-active {
+  @apply flex m-1 pt-2 pb-2 w-10 justify-center bg-blue-400 text-white rounded-lg;
+}
+
+.header-icon-inactive {
+  font-size: 10px;
+  font-weight: 300;
+  @apply text-gray-800 hover:bg-gray-200;
+}
+
+.header-icon-active {
+  font-size: 10px;
+  font-weight: 500;
+  @apply text-white;
+}
+
+.floating-menu-container {
+  display: flex;
+  align-items: center;
+}
+
+.floating-menu {
+  position: absolute;
+  left: -40px;
+}
+
+.floating-sub-menu-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-opened {
+  transform: rotate(45deg);
+  transition: all 0.2s ease-out;
+}
+.menu-closed {
+  transform: rotate(0);
+  transition: all 0.2s ease-out;
+}
